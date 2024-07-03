@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
+  
 }
 
 body {
@@ -17,6 +18,8 @@ body {
 
 nav {
   background: #073c64;
+  width: 100vw;
+  display: flex;
   padding: 10px 40px 10px 70px;
   border: 1px solid #4fa1f8;
   position: sticky;
@@ -27,6 +30,7 @@ nav {
   border-left: none;
   border-right: none;
   color:#cccccc
+  
 }
 
 nav ul {
@@ -73,11 +77,12 @@ nav ul .items a:hover {
 .slide {
   max-width: auto;
   height: 690px;
+  width: 100vw;
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 .slide img {
-  max-width: 100%; /* Gambar akan memiliki lebar maksimum 100% dari parent (slide) */
+  max-width: auto; /* Gambar akan memiliki lebar maksimum 100% dari parent (slide) */
   height: auto; /* Tetapkan ketinggian otomatis agar proporsi gambar tetap terjaga */
 }
 .slide1,
@@ -186,46 +191,51 @@ nav ul .items a:hover {
     opacity: 0;
   }
 }
-.text h1 {
+.text {
   position: absolute;
+  top: 50%; /* Posisikan di tengah vertikal */
+  left: 50%; /* Posisikan di tengah horizontal */
+  transform: translate(-50%, -50%); /* Pusatkan teks dengan transform */
   text-align: center;
-  bottom: 400px;
-  left: 20px;
   color: rgb(255, 252, 252);
+  z-index: 2; /* Pastikan teks berada di atas overlay */
+}
+
+.text h1 {
   font-size: 70px;
   font-weight: bold;
+  color: white;
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Tambahkan bayangan pada teks */
 }
+
 .text p {
-  position: absolute;
-  text-align: center;
-  bottom: 500px;
-  left: 20px;
-  color: rgb(255, 252, 252);
   font-size: 40px;
   font-weight: bold;
+  color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Tambahkan bayangan pada teks */
-
 }
+
 
 /* Kata sambutan, Foto Kepala Sekolah, Visi Misi*/
 .sambutan {
   position: absolute;
-  top: 80%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%; /* Setengah dari lebar image show */
   background: rgba(252, 253, 253, 0.8);
   padding: 20px;
-  box-shadow: 2px 4px 16px rgba(74, 118, 229, 0.1); 
+  box-shadow: 4px 4px 16px rgba(17, 119, 173, 0.449); 
   border-radius: 16px; /* Tambahkan border radius pada container */
   
 }
 .sambutan h1 {
   font-size: 26px;
+  text-align: center;
   text-transform: uppercase;
   font-weight: bold;
   margin: 0 0 0px; /* Tambahkan margin bawah pada h1 */
+  color:#0069d9
 }
 .sambutan p {
   padding: 24px ;
@@ -284,6 +294,7 @@ nav ul .items a:hover {
 .visi h5 {
   font-size: 1.2rem;
   font-style: normal;
+  color: #0069d9;
 }
 
 .visi h3 {
@@ -295,6 +306,7 @@ nav ul .items a:hover {
 .misi h5{
   font-size: 1.2rem;
   font-style: normal;
+  color: #0069d9;
 }
 
 .misi p {
@@ -413,11 +425,11 @@ nav ul .items a:hover {
 /* Properti Profil Identitas Sekolah Scrollable */
 
 .scrollable-container {
-  max-height: 400px; /* Atur tinggi maksimal container */
-  overflow-y: auto; /* Aktifkan scroll vertikal */
-  border: 1px solid #ccc; /* Tambahkan border opsional */
-  padding: 10px; /* Tambahkan padding opsional */
-  background-color: #f8f9fa; /* Tambahkan warna latar belakang opsional */
+  max-height: 400px; 
+  overflow-y: auto; 
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  background-color: #f8f9fa; 
 }
 .scroll{
   
@@ -556,6 +568,14 @@ th {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
  
+}
+#berita h1{
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .berita .boxberita .perBox {
