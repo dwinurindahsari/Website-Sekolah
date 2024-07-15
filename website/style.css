@@ -366,7 +366,26 @@ nav ul .items a:hover {
 
 
 /* Properti Profil guru css */
+.kepala-sekolah {
+  width: 250px; /* Ukuran khusus untuk kepala sekolah */
+  margin: 0 auto 20px; /* Membuat kotak berada di tengah dan memberikan jarak bawah */
+  text-align: center; /* Menjadikan teks berada di tengah */
+  border: 1px solid #ccc; /* Tambahkan border untuk kotak */
+  border-radius: 8px; /* Tambahkan border radius untuk kotak */
+  background-color: #ffffff; /* Warna latar belakang kotak */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan pada kotak */
+  padding: 10px; /* Tambahkan padding pada kotak */
+}
 
+.kepala-sekolah .card-title {
+  font-weight: bold;
+  color: #000000;
+  margin: 10px 0;
+}
+
+.kepala-sekolah .card-body {
+  background-color: #f8f9fa; /* Warna latar belakang khusus untuk kepala sekolah */
+}
 .wrapper {
   display: flex;
   overflow-x: auto;
@@ -432,12 +451,21 @@ nav ul .items a:hover {
   background-color: #f8f9fa; 
 }
 .scroll{
-  
+  display: flex;
+  align-items: center;
   margin-bottom: 10px; /* Tambahkan margin antara item */
   background-color: #ffffff; /* Tambahkan warna latar belakang item */
   padding: 10px; /* Tambahkan padding pada item */
   border-radius: 8px; /* Tambahkan border radius pada item */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan pada item */
+}
+.scroll .label {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.scroll .value {
+  flex: 2;
 }
 .container h2{
   text-align: center;
@@ -569,9 +597,9 @@ th {
   flex-wrap: wrap;
  
 }
-#berita h1{
+#berita h2{
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   margin-top: 50px;
   font-size: 2rem;
   font-weight: 600;
